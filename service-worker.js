@@ -1,10 +1,8 @@
 var log = console.log.bind(console);//bind our console to a variable
-var version = "0.0.3";
+var version = "0.0.7";
 var cacheName = "sw-demo";
 var cache = cacheName + "-" + version;
 var filesToCache = [
-    'scripts/bootstrap.min.js',
-    'styles/bootstrap.min.css',
     'index.html',
     "/",//Note that this is different from below
     "/?app=true"//This is different from above in request object's terminology
@@ -34,7 +32,7 @@ self.addEventListener("fetch", function(event) {
                     //returning response object
                     return response;
                 } else {
-                    log(event.request.url+" not found in cache fetching from network.");
+                    log(event.request.url+" not found in cache, fetching from network.");
                     //return promise that resolves to Response object
                     return fetch(event.request);
                 }

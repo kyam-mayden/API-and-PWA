@@ -12,9 +12,9 @@
         if('serviceWorker' in navigator) {
             //browser supports now register it
             navigator.serviceWorker
-                .register('service-worker.js') //Note that we have not passed scope object here now by default it will pick root scope
+                .register('service-worker.js', {scope:''}) //Note that we have not passed scope object here now by default it will pick root scope
                 .then(function() {
-                    console.log('Service Worker Registered');
+                    console.log('Nice one, service Worker Registered');
                 })
                 .catch(function(err) {
                     console.error(err);
@@ -23,7 +23,7 @@
             console.log("Ahh! Your browser does not supports serviceWorker");
         }
     </script>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest/manifest.json">
 </head>
 <body>
 <h1>Most stars: Javascript</h1>
