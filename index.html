@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github top 3 repo's</title>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        //detect if browser supports Service Worker
+        if('serviceWorker' in navigator) {
+            //browser supports now register it
+            navigator.serviceWorker
+                .register('service-worker.js') //Note that we have not passed scope object here now by default it will pick root scope
+                .then(function() {
+                    console.log('Service Worker Registered');
+                })
+                .catch(function(err) {
+                    console.error(err);
+                })
+        } else {
+            console.log("Ahh! Your browser does not supports serviceWorker");
+        }
+    </script>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<h1>Most stars: Javascript</h1>
+<main id="outer">
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+</main>
+</body>
+</html>

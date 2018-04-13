@@ -1,0 +1,15 @@
+{
+  "name": "Kyam's PWA",
+  "short_name": "Kyam",
+  "background_color": "#f8ea48",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "images/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "icon/png"
+    }
+  ]
+}
